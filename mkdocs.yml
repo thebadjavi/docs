@@ -7,8 +7,8 @@ site_description: IsardVDI Open Source Virtual Desktops.
 site_author: IsardVDI
 
 # Repository
-repo_name: 'isard-vdi/isard'
-repo_url: https://github.com/isard-vdi/isard
+repo_name: 'isard-vdi/docs'
+repo_url: https://github.com/isard-vdi/docs
 
 # Copyright
 copyright: Copyright &copy; 2016 <a href="http://www.isardvdi.com">IsardVDI</a>.
