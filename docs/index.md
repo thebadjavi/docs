@@ -1,21 +1,17 @@
 # Isard**VDI**
 
-Open Source VDI deployment based on KVM Linux. 
+Open Source VDI deployment based on KVM linux virtualization and dockers. 
 
-## What is it
+## Quick Start
 
-A quick and real time web interface to manage your virtual desktops.
-
-Bring it up:
+Get the docker-compose file and bring it up:
 
 ```
-git clone https://github.com/isard-vdi/isard
-cd isard
+wget https://github.com/isard-vdi/isard/blob/master/docker-compose.yml
 docker-compose up -d
 ```
 
-Connect with browser to the server and follow the wizard. You are ready 
-to test virtual desktops:
+Browse to https://localhost and follow wizard. You are ready to use virtual desktops:
 
 - Start **demo desktops** and connect to it using your browser and spice or 
 vnc protocol. Nothing to be installed, but already secured with certificates.

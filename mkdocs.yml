@@ -53,8 +53,21 @@ markdown_extensions:
 pages:
 - Introduction: index.md
 - Installation:
-    - On linux: install/linux.md
-    - Using docker-compose: install/docker-compose.md
-- Quick Start: quick-start/first.md
-- About: about/license.md
+    - docker-compose: install/docker-compose.md
+	- certificates: install/certificates.md
+- User:
+    - Desktops: user/desktops.md
+    - Templates: user/templates.md
+    - Media: user/media.md
+- Admin:
+    - Users: admin/users.md
+    - Domains: 
+        - Desktops: admin/domains/desktops.md
+        - Templates: admin/domains/templates.md
+        - Bases: admin/domains/bases.md
+        - Media: admin/domains/media.md
+        - Resources: admin/domains/resources.md
+    - Hypervisors: admin/hypervisors.md
+    - Updates: admin/updates.md
+- About: about.md
 
