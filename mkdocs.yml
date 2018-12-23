@@ -54,7 +54,7 @@ pages:
 - Introduction: index.md
 - Installation:
     - docker-compose: install/docker-compose.md
-	- certificates: install/certificates.md
+    - certificates: install/certificates.md
 - User:
     - Desktops: user/desktops.md
     - Templates: user/templates.md
