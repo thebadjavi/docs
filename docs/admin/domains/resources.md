@@ -1,0 +1,1 @@
+# Desktop virtual hardware resources

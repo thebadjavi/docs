@@ -1,0 +1,1 @@
+# Administering base images
