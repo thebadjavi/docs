@@ -5,6 +5,10 @@ IsardVDI now works out of the box with dockers. So you only need to have docker 
 - Install **Docker**: https://docs.docker.com/engine/installation/
 - Install **docker-compose**: https://docs.docker.com/compose/install/
 
+
+
+
+
 You could clone the full repo (git clone https://github.com/isard-vdi/isard.git) but that's only needed if you want to build docker images yourself.
 
 To bring up IsardVDI you only need to download the docker-compose file and bring it up:
