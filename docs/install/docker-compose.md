@@ -24,15 +24,15 @@ That's all, just connect to https://<ip|domain> of the server and follow wizard.
 
 IsardVDI will create following paths on your system and map it inside hypervisor and app containers:
 
-- **/opt/isard**: The main folder that will contain:
-  - **bases**: Path where base template images will be stored. The complete path will include <role>/<category>/<group>/<username>
-  - **templates**: Path where user template images will be stored. The complete path will include <role>/<category>/<group>/<username>
-  - **groups**: Path where desktop runnable images will be stored. The complete path will include <role>/<category>/<group>/<username>
-  - **media**: Path where media (iso and floppy files) will be uploaded. The complete path will include <role>/<category>/<group>/<username>
-  - **backups**: Database backups created in web interface using the backup config menu will be stored here.
-  - **uploads**: (work in progress)
-  - **logs**: Here you will have logs for all the containers. Be aware they could grow so they should be rotated/deleted programatically.
-  - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide.
+- **/opt/isard/**: The main folder that will contain:
+  + **bases**: Path where base template images will be stored. The complete path will include <role>/<category>/<group>/<username>
+  + **templates**: Path where user template images will be stored. The complete path will include <role>/<category>/<group>/<username>
+  + **groups**: Path where desktop runnable images will be stored. The complete path will include <role>/<category>/<group>/<username>
+  + **media**: Path where media (iso and floppy files) will be uploaded. The complete path will include <role>/<category>/<group>/<username>
+  + **backups**: Database backups created in web interface using the backup config menu will be stored here.
+  + **uploads**: (work in progress)
+  + **logs**: Here you will have logs for all the containers. Be aware they could grow so they should be rotated/deleted programatically.
+  + **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide.
 
 ## Build your docker images
 
