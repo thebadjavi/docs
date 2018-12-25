@@ -1,3 +1,5 @@
+[TOC]
+
 # Managing certificates
 
 SSL certificates should be used to secure web access and connections to virtual desktops with viewers. IsardVDI will generate a default self signed generic certificate when installing from the first time. Also, if no certificate present it will generate a new self signed to make use of it by default. That's why browsers will ask for certificate acceptance on first access to IsardVDI web.
@@ -51,7 +53,7 @@ Now you may connect to IsardVDI server using the qualified CN as provided with y
 
 NOTE: Multihost certificates have been also validated with this procedure to be working as expected.
 
-# Verify updated certificates
+# Troubleshooting certificates
 
 ## Web browser
 
@@ -61,6 +63,8 @@ The new certificate will be used to access your IsardVDI webserver now. Verify t
 - Check the certificates now in default folder **/opt/isard/certs/default**. Code should have generated a ca-cert.pem (server certificate extracted from fullchain). You may remove all certificates, put new ones again and start it with docker-compose up.
 
 ## Viewers
+
+### Check hypervisor pool
 
 Certificate info will be shown at menu Hypervisors -> Default pool, showing that it is in **Secure** mode and the **domain info** taken from the updated cert. 
 
@@ -72,11 +76,24 @@ You may connect to a running desktop with spice client and see [[Encrypted]] in 
 
 Note that VNC client can't be encrypted and should use a tunnel as described in viewers section.
 
-- In case it is not using certificates to access viewers after you replaced certificates and IsardVDI webserver is using it correctly, there must be a server-cert.pem error. IsardVDI extracts a ca-cert.pem from the given server-cert.pem. Please check that extracted ca-cert.pem key is the correct one with:
-  - `openssl x509 -in /opt/isard/certs/default/ca-cert.pem -text`
+### Not using certificates
+
+In case it is not using certificates to access viewers after you replaced certificates and IsardVDI webserver is using it correctly, there must be a server-cert.pem error. IsardVDI extracts a ca-cert.pem from the given server-cert.pem. Please check that extracted ca-cert.pem key is the correct one with:
+
+- `openssl x509 -in /opt/isard/certs/default/ca-cert.pem -text`
+
 - Verify that you have a full chain with your server certificate first and then your root CA chain of certificates inside server-cert (**`cat myserver.pem ca-chain.pem > server-cert.pem`**)
 
-# Reset certificates
+### Incorrect viewer hostname
+
+IsardVDI code tries to guess the hostname from certificate and updates that in isard-hypervisor. Disable isard-hypervisor in Hypervisors menu and check that viewer hostname is correct:
+
+1. Disable isard-hypervisor in Hypervisor menu
+2. Edit Hypervisor (details edit button)
+3. Check/Update viewer hostname. Should be the hostname accessible from clients.
+4. Enable isard-hypervisor again and start new domain to check viewer connection.
+
+### Reset certificates
 
 If you replaced certificates and nothing worked check the previous 'Verify updated certs' indications.
 
@@ -88,6 +105,6 @@ rm -rf /opt/isard/certs/default
 docker-compose up
 ```
 
-You could have done a backup of your previous self signed certificates working and you could also copy those ones in default certs folder instead of generating new ones.
+You may have done a backup of your previously working self signed certificates and you could now also copy those ones in default certs folder instead of generating new ones.
 
  
