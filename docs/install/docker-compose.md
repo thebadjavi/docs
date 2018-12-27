@@ -1,24 +1,44 @@
-# Install IsardVDI
+<h1>Installation</h1>
 
-IsardVDI now works out of the box with dockers. So you only need to have docker service and docker-compose installed:
+IsardVDI now works out of the box with docker & docker-compose
+
+[TOC]
+
+# Requirements
+
+. So you only need to have docker service and docker-compose installed:
 
 - Install **Docker**: https://docs.docker.com/engine/installation/
+
+  - Note: docker 17.04 or newer needed for docker-compose.yml v3.2
+
+    - ```bash
+      sudo apt install docker
+      ```
+
 - Install **docker-compose**: https://docs.docker.com/compose/install/
 
+  - Note: docker-compose 1.12 or newer needed for docker-compose.yml v3.2. You can install it using pip3:
 
+    - ```bash
+      sudo apt install python3-pip -y
+      sudo pip3 install docker-compose
+      ```
 
+# Quickstart
 
+To bring up IsardVDI you only need to download the docker-compose.ym file (or clone the full repo) and bring it up:
 
-You could clone the full repo (git clone https://github.com/isard-vdi/isard.git) but that's only needed if you want to build docker images yourself.
-
-To bring up IsardVDI you only need to download the docker-compose file and bring it up:
-
-```
-wget https://github.com/isard-vdi/isard/blob/master/docker-compose.yml
+```bash
+wget https://raw.githubusercontent.com/isard-vdi/isard/master/docker-compose.yml
 docker-compose up -d
 ```
 
-That's all, just connect to https://<ip|domain> of the server and follow wizard.
+That's all, just connect to **https://<ip|domain>** of the server and follow wizard.
+
+Note: If you do the wizard connecting through *localhost* or *127.0.0.1* the **viewer hostname** in *isard-hypervisor* will be set to that and no one will be able to open viewers.  Refer to :ref:`faq-certificates`
+
+# Insights
 
 ## Mapped paths
 
