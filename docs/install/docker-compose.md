@@ -54,6 +54,7 @@ IsardVDI will create following paths on your system and map it inside hypervisor
   - **logs**: Here you will have logs for all the containers. Be aware they could grow so they should be rotated/deleted programatically.
   - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide about [replacing certificates](install/certificates.md).
 
+
 ## Build your docker images
 
 If you prefer to build your IsardVDI alpine based docker images you have to clone the full repository (git clone https://github.com/isard-vdi/isard.git) and you will find the docker sources under docker folder:
