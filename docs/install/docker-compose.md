@@ -52,7 +52,7 @@ IsardVDI will create following paths on your system and map it inside hypervisor
   - **backups**: Database backups created in web interface using the backup config menu will be stored here.
   - **uploads**: (work in progress)
   - **logs**: Here you will have logs for all the containers. Be aware they could grow so they should be rotated/deleted programatically.
-  - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide.
+  - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide about [replacing certificates](install/certificates.md).
 
 ## Build your docker images
 
