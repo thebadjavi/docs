@@ -69,5 +69,6 @@ pages:
         - Resources: admin/domains/resources.md
     - Hypervisors: admin/hypervisors.md
     - Updates: admin/updates.md
+    - FAQ: admin/faq.md
 - About: about.md
 
