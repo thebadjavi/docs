@@ -45,7 +45,7 @@ When desktop is stopped you will be able to edit them in the edit form that will
 - **Description**: This is optional and can be updated.
 - **Options**:
   - Viewer fullscreen: If checked it will set that paraemeter in client viewer files so it will automatically open the guest in fullscreen.
-- **Hardware**: Here you can modify the hardware, networks and boot for that desktop within the [quota](quotas.md) and [alloweds](alloweds.md) for your user.
+- **Hardware**: Here you can modify the hardware, networks and boot for that desktop within the [quota](quotas.md) and [alloweds](allows.md) for your user.
 - **Media**: Here you can add or remove ISO and Floppy images already uploaded into the system and shared with your user, group, category or role.
 
 When you finish and click on **Modify desktop** button a bunch of operations will be held by IsardVDI engine to ensure that the new desktop configuration can be started in the system. If it finishes in a *Fail* state you should review your modifications.
@@ -61,7 +61,7 @@ When a desktop is stopped you will find in its details (clicking the + button on
 - **Name**: Give it a name that users will search for when creating a new desktop from that template.
 - **Description**: Optional but will give users information about.
 - **Kind**: Only admin roles will see this option that lets choose where the new template will be stores, either in bases folder or in templates folder.
-- **Allows**:  If you open the [alloweds](alloweds.md#allows-form) section you will be able to decide which roles, categories, groups and individual users you want to share this template. That means who will be able to find this template when creating a new desktop. By default all options are unchecked, what means that no one will see this template. If you add a full role, all the categories in that role will see that template. The same with groups and users.
+- **Allows**:  If you open the [alloweds](allows.md#allows-form) section you will be able to decide which roles, categories, groups and individual users you want to share this template. That means who will be able to find this template when creating a new desktop. By default all options are unchecked, what means that no one will see this template. If you add a full role, all the categories in that role will see that template. The same with groups and users.
 - **Hardware**: You can now set the default hardware that this template will need. Users will be able to modify that hardware when creating their desktops based on this template but within their [quota](quotas.md).
 
 When you click on create template button two main actions will happen:
