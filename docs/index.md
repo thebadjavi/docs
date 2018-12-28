@@ -7,7 +7,8 @@ Open Source VDI deployment based on KVM linux virtualization and dockers.
 Get the docker-compose file and bring it up:
 
 ```
-wget https://github.com/isard-vdi/isard/blob/master/docker-compose.yml
+wget https://raw.githubusercontent.com/isard-vdi/isard/master/docker-compose.yml
+docker-compose pull
 docker-compose up -d
 ```
 
