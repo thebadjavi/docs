@@ -46,14 +46,14 @@ Note: If you do the wizard connecting through *localhost* or *127.0.0.1* the **v
 IsardVDI will create following paths on your system and map it inside hypervisor and app containers:
 
 - **/opt/isard**: The main folder that will contain:
-  - **bases**: Path where base template images will be stored. The complete path will include \<role>/\<category>/\<group>/\<username>
-  - **templates**: Path where user template images will be stored. The complete path will include \<role>/\<category>/\<group>/\<username>
-  - **groups**: Path where desktop runnable images will be stored. The complete path will include \<role>/\<category>/\<group>/\<username>
-  - **media**: Path where media (iso and floppy files) will be uploaded. The complete path will include \<role>/\<category>/\<group>/\<username>
+  - **bases**: Path where base template images will be stored. The complete path will include `/opt/isard/bases/<role>/<category>/<group>/<username>/<base_disk_name.qcow2>`
+  - **templates**: Path where user template images will be stored. The complete path will include `/opt/isard/templates/<role>/<category>/<group>/<username>/<tmpl_disk_name.qcow2>`
+  - **groups**: Path where desktop runnable images will be stored. The complete path will include `/opt/isard/group/<role>/<category>/<group>/<username>/<desktop_disk_name.qcow2>`
+  - **media**: Path where media (iso and floppy files) will be uploaded. The complete path will include `/opt/isard/media/<role>/<category>/<group>/<username>/<media_(iso|floppy).(iso|fd)>`
   - **backups**: Database backups created in web interface using the backup config menu will be stored here.
   - **uploads**: (work in progress)
   - **logs**: Here you will have logs for all the containers. Be aware they could grow so they should be rotated/deleted programatically.
-  - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide about [replacing certificates](certificates.md).
+  - **certs**: Certificates for web UI and viewer connections are stored here. Also you can replace initial self-signed certificates with your commercial/letsencrypt ones following the documentation guide about [replacing certificates](certificates.md). In the actual version IsardVDI website and viewers make use of the same certificates stored at `/opt/isard/certs/default/` path location.
 
 ## Build your docker images
 
