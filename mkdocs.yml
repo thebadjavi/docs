@@ -59,6 +59,8 @@ pages:
     - Desktops: user/desktops.md
     - Templates: user/templates.md
     - Media: user/media.md
+    - Quotas: user/quotas.md
+    - Allows: user/allows.md
 - Admin:
     - Users: admin/users.md
     - Domains: 
