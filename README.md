@@ -1,4 +1,4 @@
-# IsardVDI
+# IsardVDI Docs
 
 ## Documentation
 https://isardvdi.readthedocs.io/en/latest/
