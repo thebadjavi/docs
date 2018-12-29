@@ -4,9 +4,9 @@ Desktops menú will allow you to manage your own desktops.
 
 [TOC]
 
-# Add new desktop
+## Add new desktop
 
-You have a button on the top right corner that will open a modal form where you can choose a template desktop as a base for your new desktop and set the hardware within your user [quota](quotas.md) limits.
+You have a button on the top right corner that will open a modal form where you can choose a template desktop as a base for your new desktop and set the hardware within your user quota limits.
 
 NOTE: If there are no templates to choose from you will need to [create one from an existing desktop](desktops.md#convert-to-template) or [create new one installing it from a downloaded media ISO](media.md#create-new-desktop-from-uploaded-media).
 
@@ -15,7 +15,7 @@ You shoul fill the form an click on create desktop:
 - **Name**: Fill in your desired desktop name
 - **Description**: Give it a description (optional)
 - **Search an select template**: Find a template using the search input box provided that will filter template table list and click on the template you want to create your desktop from.
-- **Set hardware**: After selecting a template you will be shown with a button that opens a selection of hardware that you can choose for your new desktop, always within your user [quota](quotas.md) limits.
+- **Set hardware**: After selecting a template you will be shown with a button that opens a selection of hardware that you can choose for your new desktop, always within your user quota limits.
 
 After creating the desktop you will find it in stopped status with a green button to start it. If you start it, a modal viewer form will be shown where you can choose your connection type.
 
@@ -28,9 +28,9 @@ The first time you start a desktop you will be presented with a viewer selection
 | **Spice client**<br /><u>(PREFERRED CLIENT)</u> | **Linux**: virt-viewer (debian based), remote-viewer (RH based) <br />**Win**: [virt-viewer](https://virt-manager.org/download/sources/virt-viewer)<br />**Mac**: No client tested to be working<br />**Android**: [aSpice viewer](https://play.google.com/store/apps/details?id=com.iiordanov.freeaSPICE)<br />**iOS**: [FlexVDI](https://itunes.apple.com/us/app/flexvdi-client/id1051361263) | YES        |
 | **Spice browser**                               | Any modern browser: Firefox, Chromium, ...                   | YES        |
 | **VNC browser**                                 | Any modern browser: Firefox, Chromium, ...                   | YES        |
-| **VNC client**                                  | **Linux**: vinagre -F console.vv <br />**Win**: [RealPlayer](https://www.realvnc.com/en/connect/download/viewer/linux/) ***1**<br />**Mac**: Default VNC client in Mac works<br />**Android**: Not tested<br />**iOS**: Not tested | NO***2**   |
+| **VNC client**                                  | **Linux**: vinagre -F console.vv <br />**Win**: [RealPlayer](https://www.realvnc.com/en/connect/download/viewer/linux/) *1<br />**Mac**: Default VNC client in Mac works<br />**Android**: Not tested<br />**iOS**: Not tested | NO*2       |
 
-***1**: When opening file in RealPlayer it will ask for password. You can copy&paste password from desktop details.
+*1: When opening file in RealPlayer it will ask for password. You can copy&paste password from desktop details.
 
 ***2**: VNC connections in KVM through a VNC client are not being encrypted. To connect securely with VNC it should be used a previously created encrypted tunnel or VPN connection.
 
