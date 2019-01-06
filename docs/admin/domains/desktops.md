@@ -28,7 +28,7 @@ There is a dropdown with a list of actions that can be performed on a set of des
 This is the usual way of creating a complete new desktop from your uploaded ISO:
 
 - **Desktop name and description**: Fill the name and description for the new desktop being created.
-- **Selected ISO/Floppy to boot from**: Select an already [uploaded media](media.md#upload-media) to install your new desktop. You have also the option to check if it is a Win proprietary ISO to install. This will also add a second ISO with optimized drivers for virtual Win (if the administrator already [downloaded from updates](updates.md#recommended-updates)).
+- **Selected ISO/Floppy to boot from**: Select an already [uploaded media](media.md#upload-media) to install your new desktop. You have also the option to check if it is a Win proprietary ISO to install. This will also add a second ISO with optimized drivers for virtual Win (if the administrator already [downloaded from updates](../updates.md#recommended-updates)).
 - **Select OS template**: Select the template that better suits your installation. It doesn't need to be the exact install, just a similar template as this will only set the generic hardware simulated for this desktop.
 - **Adjust OS template Hardware**: By default the boot option will be set to CD/DVD and may not be modified if you are planning to create it from downloaded ISO.
 
