@@ -31,14 +31,14 @@ $ python -m SimpleHTTPServer
 Serving HTTP on 0.0.0.0 port 8000 ...
 ```
 
-The URL to download mycdrom.iso in IsardVDI upload media will be **http://localhost:8000/mcdrom.iso**
+The URL to download mycdrom.iso in IsardVDI upload media will be **http://localhost:8000/mycdrom.iso**
 
 # Create new desktop from uploaded media
 
 This is the usual way of creating a complete new desktop from your uploaded ISO. You will see a desktop icon next to the finished upload and when you click it a new desktop form creation will be shown:
 
 - **Desktop name and description**: Fill the name and description for the new desktop being created.
-- **Selected ISO/Floppy to boot from**: You have the option to check if it is a Win propietary ISO to install. This will also add a second ISO with optimized drivers for virtual Win (if the administrator already downloaded from updates).
+- **Selected ISO/Floppy to boot from**: You have the option to check if it is a Win proprietary ISO to install. This will also add a second ISO with optimized drivers for virtual Win (if the administrator already downloaded from updates).
 - **Select OS template**: Select the template that better suits your installation. It doesn't need to be the exact install, just a similar template as this will only set the generic hardware simulated for this desktop.
 - **Adjust OS template Hardware**: You can set the hardware within your user quota. By default the boot option will be set to CD/DVD and may not be modified if you are planning to create it from
 
