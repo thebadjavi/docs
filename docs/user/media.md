@@ -31,7 +31,7 @@ $ python -m SimpleHTTPServer
 Serving HTTP on 0.0.0.0 port 8000 ...
 ```
 
-The URL to download mycdrom.iso in IsardVDI upload media will be **http://localhost:8000/mcdrom.iso**
+The URL to download mycdrom.iso in IsardVDI upload media will be **http://localhost:8000/mycdrom.iso**
 
 # Create new desktop from uploaded media
 
