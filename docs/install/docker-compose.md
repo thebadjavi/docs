@@ -25,6 +25,13 @@ IsardVDI now works out of the box with docker & docker-compose
       sudo pip3 install docker-compose
       ```
 
+**NOTE**: Your hardware needs to have virtualization enabled. You can check that in your BIOS but also from CLI:
+
+```
+egrep ‘(vmx|svm)’ /proc/cpuinfo
+```
+​	If you see nothing in the output your CPU has no virtualization capabilites or they are disabled in BIOS.
+
 # Quickstart
 
 To bring up IsardVDI you only need to download the docker-compose.ym file (or clone the full repo) and bring it up:
