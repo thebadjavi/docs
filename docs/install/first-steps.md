@@ -14,7 +14,7 @@ From **updates** menu administrator can download example desktops that will allo
 
 # Create your desktop
 
-Administrators and Advanced Users are able to create their own desktops by [uploading ISO](media.md#upload-media) install file to Media. Administrators can make use of User Media menu and also Administrator Domain Media menu.
+Administrators and Advanced Users are able to create their own desktops by [uploading ISO](../admin/media.md#upload-media) install file to Media. Administrators can make use of User Media menu and also Administrator Domain Media menu.
 
 ## Linux guest
 
