@@ -32,7 +32,7 @@ Follow the same process used for a Linux Guest but, for best Win guest performan
 
 During installation you will have both cd/dvd ISO files available, your Win install and the Virtio Drivers. That will allow you to add Virtio Storage drivers during install and get maximum performance.
 
-Once you finish installing it remember to install all the other drivers contained in Virtio Drivers ISO. After that you can remove all the ISOs from your desktop by [editing desktop properties](desktops.md#edit-desktop) and change boot device from CD/DVD to HARD DISK.
+Once you finish installing it remember to install inside Win guest all the other drivers contained in Virtio Drivers ISO. After that you can remove all the ISOs from your desktop by [editing desktop properties](desktops.md#edit-desktop) and change boot device from CD/DVD to HARD DISK.
 
 # Template creation
 

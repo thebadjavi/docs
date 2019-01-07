@@ -2,6 +2,20 @@
 
 [TOC]
 
+# Installation
+
+## After finishing install the default isard-hypervisor is disabled
+
+If you open de hypervisor details (click on + button) you will see messages from IsardVDI engine that can be useful to determine what happened. If you just finished install wizard and isard-hypervisor is disabled probably the problem is with virtualization capabilites.
+
+Your hardware needs to have virtualization enabled. You can check that in your BIOS but also from CLI:
+
+```
+egrep ‘(vmx|svm)’ /proc/cpuinfo
+```
+
+If you see nothing in the output your CPU has no virtualization capabilites or they are disabled in BIOS. Please verify that your CPU has that capability and that it is not disabled in BIOS.
+
 # Viewers
 
 ## Tries to connect to localhost or incorrect IP/hostname
