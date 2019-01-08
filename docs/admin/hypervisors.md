@@ -57,12 +57,22 @@ If you want to use another host as the KVM hypervisor ensure it has:
 
 - **libvirtd**:
   - * **service running**: ```systemctl status libvirtd```. Check with your distro how to install a complete KVM hypervisor:
+
       * https://wiki.debian.org/KVM#Installation
       * https://help.ubuntu.com/community/KVM/Installation
       * https://wiki.centos.org/HowTos/KVM
       * https://wiki.alpinelinux.org/wiki/KVM
-    * **certificates enabled**: Actual certificates on IsardVDI path ```/opt/isard/certs/default/``` must be copied to your new KVM server path ```/etc/pki/libvirt-spice```. Also some lines should be added to *libvirtd.conf* and *qemu.conf* to make use of the certificates.
-    * **websocket server**: In order to allow connection to viewers through browsers also a websocket server should be set up.
+
+    * **certificates enabled**: Actual certificates on IsardVDI path ```/opt/isard/certs/default/``` must be copied to your new KVM server path ```/etc/pki/libvirt-spice```. Also some lines should be added to *libvirtd.conf* and *qemu.conf* to make use of the certificates:
+
+      * ```bash
+        echo "listen_tls = 0" >> /etc/libvirt/libvirtd.conf; 
+        echo 'listen_tcp = 1' >> /etc/libvirt/libvirtd.conf;
+        echo 'spice_listen = "0.0.0.0"' >> /etc/libvirt/qemu.conf
+        echo 'spice_tls = 1' >> /etc/libvirt/qemu.conf
+        ```
+
+    * **websocket server**: In order to allow connection to viewers through browsers also a websocket server should be set up. You should look at the *start_proxy.py* included dockers/hypervisor.
 - **sshd service running and reacheable for user**: ```systemctl status sshd```
 - **curl**: It will be used to get updates. 
 - **qemu-kvm**: You should create link to your qemu-system-x86_64 like this ```ln -s /usr/bin/qemu-system-x86_64 /usr/bin/qemu-kvm```
