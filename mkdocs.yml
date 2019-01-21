@@ -73,5 +73,7 @@ pages:
     - Hypervisors: admin/hypervisors.md
     - Updates: admin/updates.md
     - FAQ: admin/faq.md
+- Extras:
+    - Grafana: extras/grafana.md
 - About: about.md
 
