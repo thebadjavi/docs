@@ -6,7 +6,7 @@ IsardVDI now works out of the box with docker & docker-compose
 
 # Requirements
 
-. So you only need to have docker service and docker-compose installed:
+You only need to have docker service and docker-compose installed:
 
 - Install **Docker**: https://docs.docker.com/engine/installation/
 
@@ -18,7 +18,7 @@ IsardVDI now works out of the box with docker & docker-compose
 
 - Install **docker-compose**: https://docs.docker.com/compose/install/
 
-  - Note: docker-compose 1.12 or newer needed for docker-compose.yml v3.2. You can install it using pip3:
+  - Note: docker-compose 1.12 or newer needed for docker-compose.yml v3.5. You can install last version using pip3:
 
     - ```bash
       sudo apt install python3-pip -y
@@ -34,7 +34,7 @@ egrep ‘(vmx|svm)’ /proc/cpuinfo
 
 # Quickstart
 
-To bring up IsardVDI you only need to download the docker-compose.ym file (or clone the full repo) and bring it up:
+To bring up IsardVDI you only need to download the docker-compose.yml file (or clone the full repo if you want to build the images yourself) and bring it up:
 
 ```bash
 wget https://raw.githubusercontent.com/isard-vdi/isard/master/docker-compose.yml
@@ -42,9 +42,9 @@ docker-compose pull
 docker-compose up -d
 ```
 
-That's all, just connect to **https://<ip|domain>** of the server and follow wizard.
+That's all, just connect to **https://<ip|domain>** of the server and follow [wizard](wizard.md).
 
-Note: If you do the wizard connecting through *localhost* or *127.0.0.1* the **viewer hostname** in *isard-hypervisor* will be set to that and no one will be able to open viewers.  Refer to  [troubleshoot incorrect viewer hostname](../admin/faq.md#tries-to-connect-to-localhost-or-incorrect-iphostname).
+Note: If you connect with your browser to the wizard through *localhost* or *127.0.0.1* the **viewer hostname** in *isard-hypervisor* will be set to that IP and no one will be able to open viewers from other computers.  Refer to  [troubleshoot incorrect viewer hostname](../admin/faq.md#tries-to-connect-to-localhost-or-incorrect-iphostname) to modify the viewer IP.
 
 # Insights
 
@@ -80,11 +80,16 @@ We do provide a build script for dockers. You only need to add version parameter
 
 After building images from source you can start it with ```docker-compose up -d```.
 
+NOTE: Check the version of containers in docker-compose.yml file to build the same version.
+
 # Sample installs
 
 ## Debian 9 Stretch
 
+With a fresh debian 9 install you can install docker and docker-compose with this commands.
+
 ### Install docker
+
 ```bash
 apt-get remove docker docker-engine docker.io containerd runc
 apt-get install     apt-transport-https     ca-certificates     curl     gnupg2     software-properties-common

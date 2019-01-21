@@ -53,9 +53,10 @@ markdown_extensions:
 pages:
 - Introduction: index.md
 - Installation:
-    - docker-compose: install/docker-compose.md
+    - Install: install/install.md
+    - Wizard: install/wizard.md
     - First Steps: install/first-steps.md
-    - certificates: install/certificates.md
+    - Certificates: install/certificates.md
 - User:
     - Desktops: user/desktops.md
     - Templates: user/templates.md
