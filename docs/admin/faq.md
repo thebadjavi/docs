@@ -27,6 +27,10 @@ Disable isard-hypervisor in Hypervisors menu and check that viewer hostname is c
 3. Check/Update viewer hostname. Should be the hostname accessible from clients.
 4. Enable isard-hypervisor again and start new domain to check viewer connection.
 
+## How can I get the password when connecting with VNC client in Win?
+
+Open the vnc browser viewer and you'll have the password in the url as a parameter. Copy it to use it with your vnc client in Win.
+
 # Certificates
 
 ## Can't access Isard after replacing certificates
@@ -55,3 +59,4 @@ In case it is not using certificates to access viewers after you replaced certif
 - `openssl x509 -in /opt/isard/certs/default/ca-cert.pem -text`
 - Verify that you have a full chain with your server certificate first and then your root CA chain of certificates inside server-cert (**`cat myserver.pem ca-chain.pem > server-cert.pem`**)
 
+If you are using an external hypervisor check that you have [copied the certificates in the correct folder](hypervisors.md#add-ssh-keys-for-new-hypervisor).
