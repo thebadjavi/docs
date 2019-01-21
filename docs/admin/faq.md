@@ -31,6 +31,12 @@ Disable isard-hypervisor in Hypervisors menu and check that viewer hostname is c
 
 Open the vnc browser viewer and you'll have the password in the url as a parameter. Copy it to use it with your vnc client in Win.
 
+# Updates
+
+## Which user and password do the downloaded domains have?
+
+All domains that can be downloaded from updates have by default the user **isard** and the password **pirineus**. The isard user has also superuser privileges.
+
 # Certificates
 
 ## Can't access Isard after replacing certificates

@@ -14,6 +14,8 @@ docker-compose up -d
 
 Browse to https://localhost and follow wizard. You are ready to use virtual desktops:
 
+![](images/main.png)
+
 - Start **demo desktops** and connect to it using your browser and spice or 
 vnc protocol. Nothing to be installed, but already secured with certificates.
 - Install virt-viewer and connect to it using the spice client. **Sound 
