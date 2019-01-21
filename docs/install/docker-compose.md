@@ -79,3 +79,28 @@ We do provide a build script for dockers. You only need to add version parameter
 ```
 
 After building images from source you can start it with ```docker-compose up -d```.
+
+# Sample installs
+
+## Debian 9 Stretch
+
+### Install docker
+```bash
+apt-get remove docker docker-engine docker.io containerd runc
+apt-get install     apt-transport-https     ca-certificates     curl     gnupg2     software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/debian \
+   $(lsb_release -cs) \
+   stable"
+apt-get update
+apt-get install docker-ce
+```
+
+### Install docker-compose
+```bash
+apt install python3-pip
+pip3 install docker-compose
+```
+
+
+
