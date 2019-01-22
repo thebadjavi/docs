@@ -18,6 +18,8 @@ There is an **Add new** button that will open a new form to make IsardVDI downlo
 
 When you click the **Upload** button it will start and you will see progress.
 
+![](../images/media/media-downloading.png)
+
 ## Uploading media from local storage
 
 If you have your ISO locally in your storage and you want to upload it to IsardVDI you can create a simple webserver which url to the file can be filled in the upload media form in IsardVDI.
@@ -37,7 +39,13 @@ The URL to download mycdrom.iso in IsardVDI upload media will be **http://localh
 
 # Create new desktop from uploaded media
 
-This is the usual way of creating a complete new desktop from your uploaded ISO. You will see a desktop icon next to the finished upload and when you click it a new desktop form creation will be shown:
+This is the usual way of creating a complete new desktop from your uploaded ISO. You will see a green desktop icon next to the finished upload.
+
+![](../images/media/media-uploaded.png)
+
+When you click it a new desktop form creation will be shown:
+
+![](../images/media/media-desktop-form.png)
 
 - **Desktop name and description**: Fill the name and description for the new desktop being created.
 - **Selected ISO/Floppy to boot from**: You have the option to check if it is a Win proprietary ISO to install. This will also add a second ISO with optimized drivers for virtual Win (if the administrator already downloaded from updates).
@@ -46,8 +54,11 @@ This is the usual way of creating a complete new desktop from your uploaded ISO.
 
 When you finish and click in **Create desktop** button a desktop will be created. Go to *Desktops* menu to start, connect to it and begin installation from selected ISO.
 
+![](../images/media/debian-install.png)
+
 ***NOTE***: When you finish the OS installation usually that guest OS will request for a reboot. You may just shutdown your guest OS and then [edit desktop](desktops.md#edit-desktop) to change boot order from CD/DVD to HARD DISK. Also you may just remove the ISO from the [edit desktop](desktops.md#edit-desktop) media section if not needed anymore.
 
 ## Create a network boot (PXE) desktop
 
 You can upload any ISO file (it can be a fake file ending with .iso that you created with touch for example) and then follow the process of [creating new desktop from uploaded media](media.md#create-new-desktop-from-uploaded-media) but selecting PXE in Boot select box instead of CD/DVD.
+
