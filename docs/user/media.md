@@ -8,6 +8,8 @@ From media manager you can upload ISO and floppy images that will allow you to c
 
 There is an **Add new** button that will open a new form to make IsardVDI download media from an URL:
 
+![](../images/media/media-upload.png)
+
 - **URL**: Paste here any ISO file download URL or floppy. (Floppies can be used to add storage drivers while installing some OSs in hard disk).
 - **NAME**: It will propose by default the file name extracted from the URL. Change it if you prefer another one.
 - **TYPE**: Select the type of media being uploaded (ISO/CDROM or Floppy)

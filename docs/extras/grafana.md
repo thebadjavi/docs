@@ -4,7 +4,9 @@
 
 # Introduction
 
-Grafana is a web frontend that allows showing dashboards with graphs. With this docker you will have statistics in real time about your IsardVDI.
+SGrafana is a web frontend that allows showing dashboards with graphs. With this docker you will have statistics in real time about your IsardVDI.
+
+![](../images/extras/grafana/sample.png)
 
 # Installation
 

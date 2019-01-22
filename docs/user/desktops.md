@@ -40,9 +40,13 @@ The first time you start a desktop you will be presented with a viewer selection
 
 When you click on the **+** sign to the left of each desktop a details view will open. There you will find actions and information about desktop hardware being used and system status information.
 
+![](../images/desktops/desktop-detail.png)
+
 ## Edit desktop
 
 When desktop is stopped you will be able to edit them in the edit form that will open:
+
+![](../images/desktops/desktop-edit-form.png)
 
 - **Description**: This is optional and can be updated.
 - **Options**:
@@ -59,6 +63,8 @@ When the desktop is stopped you can delete it. This action will ask for confirma
 ## Create template
 
 When a desktop is stopped you will find in its details (clicking the + button on the left) a button to **Template it**. The form to create a template will ask for some information:
+
+![](../images/desktops/desktop-template-form.png)
 
 - **Name**: Give it a name that users will search for when creating a new desktop from that template.
 - **Description**: Optional but will give users information about.
