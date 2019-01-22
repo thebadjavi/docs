@@ -23,6 +23,8 @@ After creating the desktop you will find it in stopped status with a green butto
 
 The first time you start a desktop you will be presented with a viewer selection form with all available types of connections to your desktop:
 
+![](../images/desktops/viewer-form.png)
+
 | CONNECTION TYPE                                 | **CLIENT NEEDED**                                            | **SECURE** |
 | ----------------------------------------------- | ------------------------------------------------------------ | ---------- |
 | **Spice client**<br /><u>(PREFERRED CLIENT)</u> | **Linux**: virt-viewer (debian based), remote-viewer (RH based) <br />**Win**: [virt-viewer](https://virt-manager.org/download/sources/virt-viewer)<br />**Mac**: No client tested to be working<br />**Android**: [aSpice viewer](https://play.google.com/store/apps/details?id=com.iiordanov.freeaSPICE)<br />**iOS**: [FlexVDI](https://itunes.apple.com/us/app/flexvdi-client/id1051361263) | YES        |
@@ -54,9 +56,9 @@ When you finish and click on **Modify desktop** button a bunch of operations wil
 
 When the desktop is stopped you can delete it. This action will ask for confirmation as it is **NOT REVERSIBLE**. You will lose anything that was related to that desktop.
 
-## Convert to template
+## Create template
 
-When a desktop is stopped you will find in its details (clicking the + button on the left) a button to 'template it'. The form to create a template will ask for some information:
+When a desktop is stopped you will find in its details (clicking the + button on the left) a button to **Template it**. The form to create a template will ask for some information:
 
 - **Name**: Give it a name that users will search for when creating a new desktop from that template.
 - **Description**: Optional but will give users information about.
@@ -71,4 +73,4 @@ When you click on create template button two main actions will happen:
 
 Now all the users whom you shared that template will be able to create a desktop identical to that template in the moment of the creation.
 
-**<u>*ALERT</u>***: <u>The process of creating a template will create an EXACT COPY of the source desktop. That means that whatever you have stored in that desktop will also be replicated in that template, and users that create desktops from that template WILL HAVE AN EXACT COPY of that desktop. Check twice before creating a template that the browsers inside don't cached your email accounts and that you have not stored any personal information in the desktop.</u>
+**<u>ALERT</u>**: <u>The process of creating a template will create an EXACT COPY of the source desktop. That means that whatever you have stored in that desktop will also be replicated in that template, and users that create desktops from that template WILL HAVE AN EXACT COPY of that desktop. Check twice before creating a template that the browsers inside don't cached your email accounts and that you have not stored any personal information in the desktop.</u>
