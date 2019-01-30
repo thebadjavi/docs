@@ -11,7 +11,7 @@ Certificates are stored in path **/opt/isard/certs/default** where it can be rep
 - **server-cert.pem**: It is the full chain of certificate with root cert included.
 - **server-key.pem**: It is the server host key.
 
-The ca-cert.pem will be generated from existing server-cert.pem
+The ca-cert.pem will be readed from existing server-cert.pem so be aware that the server-cert.pem must contain in first position the server certificate and after that one the chain of validation entity certificates (chain)
 
 ## Commercial certificate
 
@@ -57,7 +57,7 @@ NOTE: Multihost certificates have been also validated with this procedure to be 
 
 # Reset certificates
 
-If you replaced certificates and nothing worked check the previous 'Verify updated certs' indications.
+If you replaced certificates and nothing worked it is recommended to start the proccess again by resetting certificates. If you manipulate certificates in the folder it could confuss IsardVDI certificate processing code.
 
 You can always get your IsardVDI working again with self signed certificates by removing /opt/isard/certs/default folder. IsardVDI will generate and configure a new self signed certificate again. Procedure will be:
 
