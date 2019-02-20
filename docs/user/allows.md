@@ -39,7 +39,7 @@ Of course there is the user. Different [quotas](quotas.md) can be set up for eac
 
 Users are allowed to share templates and media with others with this form. By default no access will be given to anyone (nothing is checked).
 
-- **NO ONE ALLOWED** (Default): Nothing is checked. That means that no role, category, group and user should be matched.
+- **NO ONE ALLOWED** (Default): Nothing is checked. That means that no role, category, group and user should be matched. Only the owner will get access.
 
 ![](../images/users/none_allowed.png)
 - **EVERYONE ALLOWED**: If you check (and activate) any role, category, group or user check box but you don't add any in the search box beside, it will match with ANY existing.
