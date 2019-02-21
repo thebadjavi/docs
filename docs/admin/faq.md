@@ -10,11 +10,17 @@ If you open de hypervisor details (click on + button) you will see messages from
 
 Your hardware needs to have virtualization enabled. You can check that in your BIOS but also from CLI:
 
-```
+```bash
 egrep ‘(vmx|svm)’ /proc/cpuinfo
 ```
 
 If you see nothing in the output your CPU has no virtualization capabilites or they are disabled in BIOS. Please verify that your CPU has that capability and that it is not disabled in BIOS.
+
+You may also check for that capability inside de isard hypervisor running container by issuing the command:
+
+```bash
+sudo docker exec -it isard-hypervisor virsh capabilities |grep "feature name"
+```
 
 # Viewers
 
@@ -45,6 +51,8 @@ The new certificate will be used to access your IsardVDI webserver now. Verify t
 
 - In case it is not using new certificate check nginx isard container logs while bringing it up with docker-compose up (withouth daemonizing it with -d). There you will see information about the cert found in folder. 
 - Check the certificates now in default folder **/opt/isard/certs/default**. Code should have generated a ca-cert.pem (server certificate extracted from fullchain). You may remove all certificates, put new ones again and start it with docker-compose up.
+
+In case your new certificates didn't work it is recommended to remove all the certificates, bring IsardVDI up again so it will create new self-signed ones, and start the process of replacing certificates again (first brind down IsardVDI).
 
 ## Which viewer connections are encrypted?
 

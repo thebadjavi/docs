@@ -156,4 +156,10 @@ The storage network between hypervisors and NAS storage servers should be at lea
 
 As you can choose when creating hypervisor to be a **pure hypervisor**, **pure disk operations** or a **mixed one** you could add NAS storage servers as pure disk operations. That will bring a quicker disks manipulation as IsardVDI will make use of direct storage and commands on NAS.
 
-We have an IsardVDI infrastructure with six hypervisors and two pacemaker clustered NAS self made that share storage with NFSv4 and the performance is very good. We have our technical documents at thedocs.isardvi.com
+We have an IsardVDI infrastructure with six hypervisors and two pacemaker clustered NAS self made that share storage with NFSv4 and the performance is very good.
+
+## High Availability / High Performance tech docs
+
+We try to keep all our knowledge and experience in high performance and availability clusters using pacemaker, drbd, disk cachés, live migrations, etc.. at the [thedocs](http://thedocs.isardvdi.com) IsardVDI tech website.
+
+Do not miss our videos about [live virtual desktop and storage](http://thedocs.isardvdi.com/clusters/live-migration/) migration we did in our infrastructure: migrating virtual desktop from one hypervisor to another while AT THE SAME TIME we migrated it's storage from one NAS storage to another without virtual desktop user being aware of what happened!

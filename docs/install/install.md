@@ -106,6 +106,109 @@ apt-get install docker-ce
 apt install python3-pip
 pip3 install docker-compose
 ```
+## Fedora 28-29
 
+With a fresh Fedora 28-29 install you can install docker and docker-compose with this commands.
 
+### Install docker
 
+```bash
+sudo dnf remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+```
+
+### Install docker-compose
+```bash
+yum install python3-pip
+pip3 install docker-compose
+```
+
+# Troubleshooting Install
+
+## docker-compose up -d refuses to start hypervisor
+
+The may be two possible sources for this problem. One is the use of a service in your host that is on a port in the range of default ports used by hypervisor and viewers. Those ports are:
+
+- 5900-5949: Spice viewer port range
+- 55900-55949: web browser viewer ports.
+
+You can check your listening ports by issuing the command **netstat -tulpn** and checking if any of your listening ports overlaps with hypervisor port range. 
+
+There is no easy solution to this without shutting down your service before starting IsardVDI. It happens that *chromium* in Linux starts listening for *mDNS* service on port 5353. This can be easily solved by using another browser like *firefox* to access IsardVDI or starting IsardVDI containers before opening *chromium browser*. Note that this will happen only if your are going to use the same computer to run IsardVDI and access it through a local browser in the server.
+
+## After doing the wizard the hypervisor details say there is no virtualization available
+
+Some CPUs (mostly old ones) don't have hardware virtualization, others have it but it is disabled in BIOS. In the first case there is nothing that can be done. If it is disabled in BIOS then you should check for VT-X or Virtualization or SVM and activate it.
+
+[More info in admin faqs](../admin/faqs.md#after-finishing-install-the-default-isard-hypervisor-is-disabled)
+
+# Nested installation in KVM
+
+Check for nested virtualization option in your host operating system:
+
+- Intel processors: ```cat /sys/module/kvm_intel/parameters/nested```
+- AMD processors: ```cat /sys/module/kvm_amd/parameters/nested```
+
+It should show a **1** or **Y** if it is enabled.
+
+You will need to enable nested virtualization on your host operating system if not active yet.
+
+## Nested virt in Intel processors:
+
+### Live
+
+With all VMs stopped remove kvm_intel module
+```
+modprobe -r kvm_intel
+```
+And load it again with nested option:
+```
+modprobe kvm_intel nested=1
+```
+
+### Permanent
+
+Create the file ```/etc/modprobe.d/kvm.conf``` and add inside:
+```
+options kvm_intel nested=1
+```
+
+## Nested virt in AMD processors:
+
+### Live
+
+With all VMs stopped remove kvm_amd module
+```
+modprobe -r kvm_amd
+```
+And load it again with nested option:
+```
+modprobe kvm_amd nested=1
+```
+
+### Permanent
+
+Create the file ```/etc/modprobe.d/kvm.conf``` and add inside:
+```
+options kvm_amd nested=1
+```
+
+# Installing IsardVDI inside VMWare ESXi guest
+
+Enable host CPU passthrough to the guest. That should be enough.
