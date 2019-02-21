@@ -156,7 +156,7 @@ There is no easy solution to this without shutting down your service before star
 
 Some CPUs (mostly old ones) don't have hardware virtualization, others have it but it is disabled in BIOS. In the first case there is nothing that can be done. If it is disabled in BIOS then you should check for VT-X or Virtualization or SVM and activate it.
 
-[More info in admin faqs](../admin/faqs.md#after-finishing-install-the-default-isard-hypervisor-is-disabled)
+[More info in admin faqs](../admin/faq.md#after-finishing-install-the-default-isard-hypervisor-is-disabled)
 
 # Nested installation in KVM
 
