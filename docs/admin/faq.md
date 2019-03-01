@@ -30,8 +30,36 @@ Disable isard-hypervisor in Hypervisors menu and check that viewer hostname is c
 
 1. Disable isard-hypervisor in Hypervisor menu
 2. Edit Hypervisor (details edit button)
-3. Check/Update viewer hostname. Should be the hostname accessible from clients.
+3. Check/Update **Client viewers address**. Should be the hostname/IP where IsardVDI is running and must be accessible from clients.
 4. Enable isard-hypervisor again and start new domain to check viewer connection.
+
+### Explanation
+
+Probably you did the wizard using 'localhost' or an IP address different to the one you are trying to connect now with viewers. That lead to an isard-hypervisor set up with 'localhost' or that wrong server IP address.
+
+You can always modify the viewer address used for clients editing the isard-hypervisor. To edit it you must first disable isard-hypervisor by clicking in Enable/disable button:
+
+![](../images/admin/faq/viewer_hyper_disabled.png)
+
+ and then the edit button will be enabled so you can access the isard-hypervisor edit form:
+
+![](../images/admin/faq/viewer_hyper_form.png)
+
+There are two viewer IPs that can be set:
+
+- **Client viewers address**: This IP/dns will be the one used in viewers from your network connecting to your IsardVDI server. So it should be set up to the real IP address of your server.
+- **Client viewers nat address**: This address only makes sense if you are planning to give access to this server from outside your organization through a NAT router. If this is your case then you must also set here the external static IP address (or domain name or dynamic domain name) from where it could be reached. 
+  - The **Client viewers TCP offset** option is there to offset the default 5900-5949 viewer range port accessible from internal network to another range from outside through the NAT. For example we have a set up with six hypervisors and all of them are accessible from inside with default range (5900-5949) but we set up NAT rules in our external router so each of the hypervisors have an external mapping port that not collides with others. IsardVDi will try to guess the client from connecting from inside your organization or from outside and will set up viewer address or viewer nat address depending on each origin client connecting.
+
+So, usually you only have to modify the **Client viewers address** and enable the hypervisor again. 
+
+NOTE: *When enabling and disabling hypervisors it is recommended to restart isard-app container as this process is not completely reliable now and could fail. To restart it do:*
+
+```bash
+sudo docker-compose restart isard-app
+```
+
+This does not affect to currently started virtual machines.
 
 ## How can I get the password when connecting with VNC client in Win?
 
