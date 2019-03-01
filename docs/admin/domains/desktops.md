@@ -17,6 +17,8 @@ There are some actions that administrator can perform on each desktop, besides o
 
 There is a dropdown with a list of actions that can be performed on a set of desktops. Desktops can be selected clicking over them. Not selecting any desktop will lead to a whole desktop set selection, be carefull:
 
+![](../../images/admin/domains/desktops/global_actions.png)
+
 - **Toggle status**: This action will toggle *start* and *stopped* status. All the desktops selected will switch their status at once.
 - **Stop no viewers**: All the desktops started in the selection set that the system detected that no one is connected with a viewer will be stopped.
 - **Force stopped**: Whatever state has the desktop a *stopped* state will be set.

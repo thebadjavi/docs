@@ -40,21 +40,21 @@ Wizard forces to set up a new **admin** user password. Click on **Change passwor
 
 Click on **Next** button when password has been updated.
 
-## 4. Engine
-
-Wizard checks for IsardVDI engine to be running in background. If it fails, let some seconds to be up and click on **Check again** button. When it finds the running engine it will continue to next step.
-
-![](../images/wizard/4.png)
-
-Click on **Next** button if already found the engine.
-
-## 5. Hypervisor
+## 4. Hypervisor
 
 IsardVDI comes with a dockerized KVM hypervisor and now the wizard will check if it is online.
 
 ![](../images/wizard/5.png)
 
 Click on **Next** button as it should be up and running already.
+
+## 5. Engine
+
+Wizard checks for IsardVDI engine to be running in background. If it fails, let some seconds to be up and click on **Check again** button. When it finds the running engine it will continue to next step.
+
+![](/home/darta/jvinolas/docs/docs/images/wizard/4.png)
+
+Click on **Next** button if already found the engine.
 
 ## 6. Updates
 
