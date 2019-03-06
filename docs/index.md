@@ -14,7 +14,7 @@ docker-compose up -d
 
 Browse to https://localhost and follow wizard. You are ready to use virtual desktops:
 
-![](images/main.png)
+![](images/install.gif)
 
 - Start **demo desktops** and connect to it using your browser and spice or 
 vnc protocol. Nothing to be installed, but already secured with certificates.
@@ -28,6 +28,8 @@ menu option. When you finish installing the operating system and
 applications create a **Template** and decide which users or categories 
 you want to be able to create a desktop identical to that template. Thanks to the **incremental disk creation** all this can be done within 
 minutes.
+
+<iframe src="https://drive.google.com/file/d/1tPL12yw3MEV5IEPL5by7z76zVVSNnAng/preview" width="640" height="480"></iframe>
 
 Don't get tied to an 'stand-alone' installation in one server. You can 
 add more hypervisors to your **pool** and let IsardVDI decide where to 
