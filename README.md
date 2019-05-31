@@ -1,15 +1,15 @@
 # IsardVDI Docs
 
-## Documentation
+## Documentacion
 https://isardvdi.readthedocs.io/en/latest/
 
-## Sources
+## Fuentes
 https://github.com/isard-vdi/isard
 
-## Quick start
+## Inicio rápido
 ```
 wget https://github.com/isard-vdi/isard/blob/master/docker-compose.yml
 docker-compose pull & docker-compose up
 ```
-Access to your new IsardVDI installation at https://localhost
+Accede a la nueva instalación de IsardVDI en https://localhost
 
